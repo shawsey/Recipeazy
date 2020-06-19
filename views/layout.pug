@@ -1,0 +1,31 @@
+include mixins 
+
+doctype
+html
+  head
+    title Recipe Explorer
+    meta( charset='utf-8' )
+    meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+    meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+    meta( name='description', content='Easily track, add, search, and filter your personal recipes.' )
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/chunkfive-fontface.css')
+    link(href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css", rel="stylesheet")
+  body
+    +nav ("recipexplorer", "dropdown_menu")
+      +nav_item( "/", "active" ) Home
+      +nav_item( "/" ) Search
+      +nav_item( "/" ) Add
+
+    section#wrapper
+      block content
+  footer 
+    section.css-table
+      section.four-column
+        section.cell
+          a(href="https://github.com/shawsey/recipe-explorer") Github
+
+script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
+script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
+
+        
