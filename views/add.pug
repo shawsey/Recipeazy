@@ -1,0 +1,105 @@
+extends layout
+include mixins
+
+block content
+
+    .row
+      .col-lg-12
+      // /.col-lg-12
+    // /.row
+    .row
+      .col-lg-12
+        .panel.panel-default
+          .panel-heading
+            | Add a Recipe
+          .panel-body
+            .row
+              .col-lg-3
+                form(name="form-generate", action="/" method="post")
+                  .form-group
+                    label Recipe Catagories
+                    .checkbox
+                      label
+                        input(type="checkbox", , name="breakfastFilter", value="true")
+                        | Breakfast
+                    .checkbox
+                      label
+                        input(type="checkbox", name="lunchFilter", value="true")
+                        | Lunch
+
+                    .checkbox
+                      label
+                        input(type="checkbox", name="lname", value="true")
+                        | Dinner
+              .col-lg-3
+                  .form-group
+                    label 
+                    .checkbox
+                      label
+                        input(type="checkbox", , name="breakfastFilter", value="true")
+                        | Desert
+                    .checkbox
+                      label
+                        input(type="checkbox", name="lunchFilter", value="true")
+                        | Drink
+
+                    .checkbox
+                      label
+                        input(type="checkbox", name="lname", value="true")
+                        | Mexican
+              .col-lg-3
+                  .form-group
+                    label 
+                    .checkbox
+                      label
+                        input(type="checkbox", , name="breakfastFilter", value="true")
+                        | Italian
+                    .checkbox
+                      label
+                        input(type="checkbox", name="lunchFilter", value="true")
+                        | Chinese/Japanese
+
+                    .checkbox
+                      label
+                        input(type="checkbox", name="lname", value="true")
+                        | Soulfood
+                    
+            .row
+              .col-lg-6 
+
+                  .form-group
+                    label Recipe Name 
+                        input.form-control(type="text", placeholder="Spaghetti")
+                    label Cook & Prep Time 
+                        input.form-control(type="text", placeholder="15 Minutes")
+                    label Difficulty 
+                        input.form-control(type="text", placeholder="Easy/Med/Hard")
+                  
+            .row
+              .col-lg-6 
+                  .form-group
+                    label Ingredient List 
+                        textarea.rounded-0.input-lg.form-control(rows="10")
+              .col-lg-6
+                  .form-group
+                    label Steps 
+                        textarea.rounded-0.input-lg.form-control(rows="10")
+
+            .row
+              .col-xs-4
+
+                    button.btn.btn-default.btn-block(type="submit") Add
+              .col-xs-4
+                    button.btn.btn-default.btn-block(type="reset") Reset
+     
+            
+
+                    
+                
+                
+              // /.col-lg-6 (nested)
+            // /.row (nested)
+          // /.panel-body
+        // /.panel
+      // /.col-lg-12
+    // /.row
